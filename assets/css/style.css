@@ -1,0 +1,123 @@
+
+ /* Lin to google fonts */
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
+
+ * {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+ }
+
+ body {
+    width: 75%;
+    background-color: brown;
+ }
+
+header {
+    display: inline;
+    margin: 2.5% 0 2.5% 0 ;
+    height: 50px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    padding: 10px 10px;
+}
+
+h5 {
+    padding-bottom: 5px;
+}
+
+p {
+    width: 98%;    
+}
+
+article {
+    position: relative;
+    display: inline;
+    border-style: solid;
+    background-color: black;
+    border-radius: 5px;
+    border-width: 5px;
+}
+
+section {
+    display: inline;
+    margin: 1% 0 1% 0;
+}
+
+.box-left {
+    float: left;
+}
+
+.box-right {
+    float: right;
+}
+
+.box-half {
+    display: inline;
+    width: 49%;
+    height: 250px;
+    display: inline-block;
+    margin: 10px 0 5px 0;
+}
+
+.box-half p {
+    text-align: center;
+}
+
+#dice-one, #dice-two {
+    text-align: center;
+    font-size: 7.5rem;
+}
+
+#total-score {
+    text-align: center;
+    font-size: 4rem;
+}
+
+#image-ailen-512, #image-ailen-hungry {
+    height: 25%;
+    width: 25%;
+    padding-top: 2.5%;
+}
+
+.my-button {
+    position: relative;
+    width: 50%;
+    height: 50px;
+    background-color: black;
+    border-color: white;
+    border-radius: 5px;
+    border-width: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+    left: 25%;
+    margin: 10px 0 10px 0;
+}
+
+.my-button-hide {
+    display: none;
+}
+
+ul {
+    margin: 10px 0 10px 30px;
+}
+
+li {
+    list-style-image: url(/assets/images/favicon_io/favicon-16x16.png);
+}
+
+button  {
+    display: inline-block;
+    color: brown;
+}
+
+footer {
+    display: inline;
+    text-align: center;
+    margin: 2.5% 2.5%;
+}
