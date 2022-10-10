@@ -53,7 +53,7 @@ function statusReport() {
             divStatus.innerHTML = `
             <h2>Status Report:</h2>
             <p id="status-report">Let the good times begin, the Mother-Ship is coming to collect you!</p>
-            <p><img src="/assets/images/favicon_io/android-chrome-512x512.png" id="image-ailen-512" /></p>
+            <p><img src="assets/images/favicon_io/android-chrome-512x512.png" id="image-ailen-512" /></p>
             `
             divStatus.style.borderColor = "yellow";
             showButton.classList.remove("my-button-hide");
@@ -61,7 +61,7 @@ function statusReport() {
             divStatus.innerHTML = `
             <h2>Status Report:</h2>
             <p id="status-report">We are hungry, the Catering-Ship is coming for you</p>
-            <p><img src="/assets/images/favicon_io/hungry_alien.png" id="image-ailen-hungry" /></p>
+            <p><img src="assets/images/favicon_io/hungry_alien.png" id="image-ailen-hungry" /></p>
             `
             divStatus.style.borderColor = "red";
             showButton.classList.remove("my-button-hide");
