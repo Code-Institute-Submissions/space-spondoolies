@@ -60,7 +60,7 @@ function statusReport() {
   let hideButton = document.getElementById("spin-the-dice");
 
   if (statusScore <= 0 && statusScore >= -9999) {
-    report.innerText = "Do something, you are going to be Alien Fast Food!";
+    report.innerText = "Do something, rub your nose for luck!! You are going to be Alien Fast Food!";
     divStatus.style.borderColor = "red";
   } else if (statusScore >= 0 && statusScore <= 9999) {
     report.innerText = "Looking good you humans are a lucky race!!";
