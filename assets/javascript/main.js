@@ -42,6 +42,7 @@ function statusReport() {
     let report = document.getElementById("status-report");
     let divStatus = document.getElementById("div-status");
     let showButton = document.getElementById("hide-button");
+    let hideButton = document.getElementById("spin-the-dice");
 
     if(statusScore <= 0 && statusScore >= -9999 ) {
             report.innerText = "Do something, you are going to be Ailen Fast Food!"
@@ -57,6 +58,7 @@ function statusReport() {
             `
             divStatus.style.borderColor = "yellow";
             showButton.classList.remove("my-button-hide");
+            hideButton.classList.add("my-button-hide");
     } else if(statusScore <= -10000) {
             divStatus.innerHTML = `
             <h2>Status Report:</h2>
@@ -65,6 +67,7 @@ function statusReport() {
             `
             divStatus.style.borderColor = "red";
             showButton.classList.remove("my-button-hide");
+            hideButton.classList.add("my-button-hide");
     } else {
             report.innerText = "Computing updates....."
             divStatus.style.borderColor = "orange";
