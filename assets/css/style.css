@@ -110,7 +110,7 @@ section {
   margin: 10px 0 10px 0;
 }
 
-.my-button-hide {
+.my-button-hide, .bonus-hide {
   display: none;
 }
 
@@ -131,6 +131,29 @@ footer {
   display: inline;
   text-align: center;
   margin: 2.5% 2.5%;
+}
+
+#bonus-points {
+  position: absolute;
+  bottom: 0%;
+  left: 17.5%;
+  font-size: 2.5rem;
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  z-index: 500;
+  animation: pulse 1s infinite;
+  animation-iteration-count: 3;
+}
+
+
+@keyframes pulse {
+  0% {
+    color: black;
+  }
+  100% {
+    color: red;
+  }
 }
 
 /* Media Queries for smaller screens */

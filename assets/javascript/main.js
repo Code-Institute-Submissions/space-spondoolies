@@ -96,11 +96,16 @@ function statusReport() {
  **/
 function scoreBoard() {
   let allDice = diceOne() + diceTwo();
+  let bonusPoints = document.getElementById("bonus-points");
 
-  if (allDice % 2 === 0) {
-    allDice += 2000 - allDice;
+  if (diceOne() === diceTwo()) { //Bonus Points for a double.
+    allDice += 4000 - allDice; 
+    bonusPoints.classList.toggle("bonus-hide");
+    return[allDice]
+  } else if (allDice % 2 === 0) { //Even numbers.
+    allDice += 2000 - allDice; 
     return [allDice];
-  } else if (allDice % 2 === 1) {
+  } else if (allDice % 2 === 1) { //Odd numbers.
     allDice -= 2000 + allDice;
     return [allDice];
   } else {
