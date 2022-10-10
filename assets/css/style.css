@@ -22,6 +22,10 @@ header {
   text-align: center;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
 h1,
 h2,
 h3 {
@@ -92,6 +96,7 @@ section {
   height: 25%;
   width: 25%;
   padding-top: 2.5%;
+  z-index: 100;
 }
 
 /* Styling Buttons */
@@ -163,6 +168,15 @@ footer {
     width: 90%;
   }
 
+  h1 {
+    font-size: 2rem;
+  }
+
+  #bonus-points {
+    font-size: 1.5rem;
+    left: 5%;
+  }
+
   .box-half {
     display: inline;
     width: 49%;
@@ -208,6 +222,7 @@ article h2{
   height: 50%;
   width: 50%;
   padding-top: 2.5%;
+  z-index: 100;
 }
 
 }

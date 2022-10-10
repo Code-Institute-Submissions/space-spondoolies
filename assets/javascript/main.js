@@ -111,7 +111,7 @@ function scoreBoard() {
   } else {
     allDice += 1000 - allDice;
     return [allDice];
-  }
+  } 
 }
 
 /**
