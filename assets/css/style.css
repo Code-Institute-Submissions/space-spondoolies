@@ -185,6 +185,7 @@ footer {
   }
 }
 
+/**************************************/
 /* Media Queries for smaller screens */
 @media screen and (max-width: 800px) {
   body {

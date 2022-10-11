@@ -70,7 +70,7 @@ function statusReport() {
   let showButton = document.getElementById("hide-button");
   let hideButton = document.getElementById("spin-the-dice");
   let userName = document.getElementById("user-name").value;
-  let statusRedOrange = `Orange-Red Waring: Do something ${userName}, rub your nose for luck!! Hide the Ketchup!`;
+  let statusRedOrange = `Warning Warning: Do something ${userName}, rub your nose for luck!! Quick hide the Ketchup!`;
   let statusRed = `Red Alert: Do something extreme ${userName}, quick eat a rabbits tail!! Or you are going to be Alien Fast Food!`;
   let statusOrange = `Orange Alert: ${userName}, as you Humans say, your head is above water!!`;
   let statusGreen = `Go Green: Looking good ${userName}, you humans are a lucky species!!`;
@@ -91,7 +91,7 @@ function statusReport() {
     divStatus.innerHTML = `
             <h2>Status Report:</h2>
             <p id="status-report">Let the good times begin, the Mother-Ship is coming to collect you!</p>
-            <p><img src="assets/images/favicon_io/android-chrome-512x512.png" id="image-alien-512" /></p>
+            <p><img src="assets/images/favicon_io/android-chrome-512x512.png" id="image-alien-512" alt="image of a happy alien"/></p>
             `;
     divStatus.style.borderColor = "yellow";
     showButton.classList.remove("my-button-hide");
@@ -100,7 +100,7 @@ function statusReport() {
     divStatus.innerHTML = `
             <h2>Status Report:</h2>
             <p id="status-report">We are hungry!! The Catering-Ship is coming for you</p>
-            <p><img src="assets/images/favicon_io/hungry_alien.png" id="image-alien-hungry" /></p>
+            <p><img src="assets/images/favicon_io/hungry_alien.png" id="image-alien-hungry" alt="image of hungry alien"/></p>
             `;
     divStatus.style.borderColor = "red";
     showButton.classList.remove("my-button-hide");
@@ -128,10 +128,12 @@ function scoreBoard() {
   } else if (allDice % 2 === 0) {
     //Even numbers.
     allDice += 2000 - allDice;
+    bonusPoints.classList.add("bonus-hide");
     return [allDice];
   } else if (allDice % 2 === 1) {
     //Odd numbers.
     allDice -= 2000 + allDice;
+    bonusPoints.classList.add("bonus-hide");
     return [allDice];
   } else {
     allDice += 1000 - allDice;
