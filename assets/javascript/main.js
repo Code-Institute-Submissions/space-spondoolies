@@ -60,19 +60,30 @@ function statusReport() {
   let showButton = document.getElementById("hide-button");
   let hideButton = document.getElementById("spin-the-dice");
   let userName = document.getElementById("user-name").value;
- 
 
   if (statusScore <= 0 && statusScore >= -5000) {
-    report.innerText = "Orange-Red Waring: Do something " + `${userName}` + ", rub your nose for luck!! Hide the Ketchup!";
+    report.innerText =
+      "Orange-Red Waring: Do something " +
+      `${userName}` +
+      ", rub your nose for luck!! Hide the Ketchup!";
     divStatus.style.borderColor = "orangered";
   } else if (statusScore <= -5001 && statusScore >= -9999) {
-    report.innerText = "Red Alert: Do something extreme " + `${userName}` + " , Eat a rabbits tail!! You are going to be Alien Fast Food!";
+    report.innerText =
+      "Red Alert: Do something extreme " +
+      `${userName}` +
+      " , Eat a rabbits tail!! You are going to be Alien Fast Food!";
     divStatus.style.borderColor = "red";
   } else if (statusScore >= 0 && statusScore <= 5000) {
-    report.innerText = "Orange Alert: " + `${userName}` + ", as you Humans say, your head is above water!!";
+    report.innerText =
+      "Orange Alert: " +
+      `${userName}` +
+      ", as you Humans say, your head is above water!!";
     divStatus.style.borderColor = "orange";
   } else if (statusScore >= 5001 && statusScore <= 9999) {
-    report.innerText = "Go Green: Looking good " + `${userName}` + " you humans are a lucky race!!";
+    report.innerText =
+      "Go Green: Looking good " +
+      `${userName}` +
+      " you humans are a lucky race!!";
     divStatus.style.borderColor = "green";
   } else if (statusScore >= 10000) {
     divStatus.innerHTML = `
@@ -107,20 +118,23 @@ function scoreBoard() {
   let allDice = diceOne() + diceTwo();
   let bonusPoints = document.getElementById("bonus-points");
 
-  if (diceOne() === diceTwo()) { //Bonus Points for a double.
-    allDice += 2500 - allDice; 
+  if (diceOne() === diceTwo()) {
+    //Bonus Points for a double.
+    allDice += 2500 - allDice;
     bonusPoints.classList.toggle("bonus-hide");
-    return[allDice]
-  } else if (allDice % 2 === 0) { //Even numbers.
-    allDice += 2000 - allDice; 
     return [allDice];
-  } else if (allDice % 2 === 1) { //Odd numbers.
+  } else if (allDice % 2 === 0) {
+    //Even numbers.
+    allDice += 2000 - allDice;
+    return [allDice];
+  } else if (allDice % 2 === 1) {
+    //Odd numbers.
     allDice -= 2000 + allDice;
     return [allDice];
   } else {
     allDice += 1000 - allDice;
     return [allDice];
-  } 
+  }
 }
 
 /**

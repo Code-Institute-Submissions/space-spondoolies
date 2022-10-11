@@ -85,7 +85,7 @@ section {
   border: brown;
 }
 
-input[type=text] {
+input[type="text"] {
   border: 2px solid white;
   border-radius: 4px;
   width: 50%;
@@ -133,7 +133,8 @@ input[type=text] {
   margin: 10px 0 10px 0;
 }
 
-.my-button-hide, .bonus-hide {
+.my-button-hide,
+.bonus-hide {
   display: none;
 }
 
@@ -156,6 +157,7 @@ footer {
   margin: 2.5% 2.5%;
 }
 
+/* Animation For Bonus Points */
 #bonus-points {
   position: absolute;
   bottom: 0%;
@@ -169,7 +171,6 @@ footer {
   animation-iteration-count: 3;
 }
 
-
 @keyframes pulse {
   0% {
     color: black;
@@ -181,7 +182,6 @@ footer {
 
 /* Media Queries for smaller screens */
 @media screen and (max-width: 800px) {
-
   body {
     width: 90%;
   }
@@ -203,44 +203,43 @@ footer {
     margin: 5px 0 5px 0;
   }
 
-/* Styling Buttons */
-.my-button {
-  position: relative;
-  width: 60%;
-  height: 50px;
-  background-color: black;
-  border-color: white;
-  border-radius: 5px;
-  border-width: 5px;
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  left: 20%;
-  margin: 10px 0 10px 0;
-}
+  /* Styling Buttons */
+  .my-button {
+    position: relative;
+    width: 60%;
+    height: 50px;
+    background-color: black;
+    border-color: white;
+    border-radius: 5px;
+    border-width: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    left: 20%;
+    margin: 10px 0 10px 0;
+  }
 
-#dice-one,
-#dice-two {
-  text-align: center;
-  font-size: 5rem;
-}
+  #dice-one,
+  #dice-two {
+    text-align: center;
+    font-size: 5rem;
+  }
 
-#total-score {
-  text-align: center;
-  font-size: 2.25rem;
-}
+  #total-score {
+    text-align: center;
+    font-size: 2.25rem;
+  }
 
-article h2{
-  font-size: 1rem;
-}
+  article h2 {
+    font-size: 1rem;
+  }
 
-/* Alien Images */
-#image-alien-512,
-#image-alien-hungry {
-  height: 50%;
-  width: 50%;
-  padding-top: 2.5%;
-  z-index: 100;
-}
-
+  /* Alien Images */
+  #image-alien-512,
+  #image-alien-hungry {
+    height: 50%;
+    width: 50%;
+    padding-top: 2.5%;
+    z-index: 100;
+  }
 }
