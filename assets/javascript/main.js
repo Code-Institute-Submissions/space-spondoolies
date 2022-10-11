@@ -99,7 +99,7 @@ function statusReport() {
   } else if (statusScore <= -10000) {
     divStatus.innerHTML = `
             <h2>Status Report:</h2>
-            <p id="status-report">We are hungry!! The Catering-Ship is coming for you</p>
+            <p id="status-report">We are hungry!! The Catering-Ship is coming for you!</p>
             <p><img src="assets/images/favicon_io/hungry_alien.png" id="image-alien-hungry" alt="image of hungry alien"/></p>
             `;
     divStatus.style.borderColor = "red";
