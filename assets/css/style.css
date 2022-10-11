@@ -66,16 +66,34 @@ section {
 
 /* Article box for dashboard */
 .box-half {
-  display: inline;
+  display: inline-block;
   width: 49%;
   height: 275px;
-  display: inline-block;
   margin: 10px 0 5px 0;
   overflow: auto;
 }
 
 .box-half p {
   text-align: center;
+}
+
+.box-full {
+  display: inline-block;
+  width: 100%;
+  height: 80px;
+  background-color: brown;
+  border: brown;
+}
+
+input[type=text] {
+  border: 2px solid white;
+  border-radius: 4px;
+  width: 50%;
+  height: 30px;
+  margin-left: 25%;
+  text-align: center;
+  font-size: large;
+  background-color: black;
 }
 
 /* Text sizing for dashboard */

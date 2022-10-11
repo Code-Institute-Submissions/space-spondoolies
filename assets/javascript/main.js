@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         diceTwo();
         totalScore();
         statusReport();
+        document.getElementById("user-name").classList.add("my-button-hide");
       } else {
         alert("Pressed");
       }
@@ -58,12 +59,20 @@ function statusReport() {
   let divStatus = document.getElementById("div-status");
   let showButton = document.getElementById("hide-button");
   let hideButton = document.getElementById("spin-the-dice");
+  let userName = document.getElementById("user-name").value;
+ 
 
-  if (statusScore <= 0 && statusScore >= -9999) {
-    report.innerText = "Do something, rub your nose for luck!! You are going to be Alien Fast Food!";
+  if (statusScore <= 0 && statusScore >= -5000) {
+    report.innerText = "Orange-Red Waring: Do something " + `${userName}` + ", rub your nose for luck!! Hide the Ketchup!";
+    divStatus.style.borderColor = "orangered";
+  } else if (statusScore <= -5001 && statusScore >= -9999) {
+    report.innerText = "Red Alert: Do something extreme " + `${userName}` + " , Eat a rabbits tail!! You are going to be Alien Fast Food!";
     divStatus.style.borderColor = "red";
-  } else if (statusScore >= 0 && statusScore <= 9999) {
-    report.innerText = "Looking good you humans are a lucky race!!";
+  } else if (statusScore >= 0 && statusScore <= 5000) {
+    report.innerText = "Orange Alert: " + `${userName}` + ", as you Humans say, your head is above water!!";
+    divStatus.style.borderColor = "orange";
+  } else if (statusScore >= 5001 && statusScore <= 9999) {
+    report.innerText = "Go Green: Looking good " + `${userName}` + " you humans are a lucky race!!";
     divStatus.style.borderColor = "green";
   } else if (statusScore >= 10000) {
     divStatus.innerHTML = `
@@ -77,7 +86,7 @@ function statusReport() {
   } else if (statusScore <= -10000) {
     divStatus.innerHTML = `
             <h2>Status Report:</h2>
-            <p id="status-report">We are hungry, the Catering-Ship is coming for you</p>
+            <p id="status-report">We are hungry!! The Catering-Ship is coming for you</p>
             <p><img src="assets/images/favicon_io/hungry_alien.png" id="image-alien-hungry" /></p>
             `;
     divStatus.style.borderColor = "red";

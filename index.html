@@ -55,21 +55,27 @@
     <!-- Status Report-->
     <article id="div-status" class="box-half box-right">
       <h2>Status Report:</h2>
-      <p id="status-report">Updating.....</p>
+      <p id="status-report">Enter your name, or just be a boring Human....Press: Spin The Dice....Updating.....</p>
       <h1 id="bonus-points" class="bonus-hide">Bonus Points!</h1>
     </article>
 
     <!--Buttons-->
+    <article class="box-full">
     <button data-type="spin" id="spin-the-dice" class="my-button">
       Spin The Dice
     </button>
+
     <button
-      onClick="window.location.reload();"
+      onClick="window.location.reload(true);"
       id="hide-button"
       class="my-button-hide my-button"
     >
       Reload
     </button>
+
+      <input id="user-name" class="" type="text" id="fname" name="fname" value="Human"><br>
+
+  </article>
 
     <!--Alien Terms and Conditions-->
     <section>
