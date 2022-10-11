@@ -21,8 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         diceTwo();
         totalScore();
         statusReport();
-        document.getElementById("user-name").classList.add("my-button-hide");
-        document.getElementById("user-name-head").classList.add("my-button-hide");
+        hideElements();
       } else {
         alert("Pressed");
       }
@@ -30,6 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+/**
+ * Function to hide elements on first click.
+ * Also trying out a new way to declare a function.
+ * It works!!!
+ **/
+let hideElements = () => {
+  document.getElementById("user-name").classList.add("my-button-hide");
+  document.getElementById("user-name-head").classList.add("my-button-hide");
+}
+ 
 /**
  * Function to give a random number between 1 and 6 to mimic a dice number. Dice one of two.
  **/
