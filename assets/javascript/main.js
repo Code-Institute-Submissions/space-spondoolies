@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
 let hideElements = () => {
   document.getElementById("user-name").classList.add("my-button-hide");
   document.getElementById("user-name-head").classList.add("my-button-hide");
-}
- 
+};
+
 /**
  * Function to give a random number between 1 and 6 to mimic a dice number. Dice one of two.
  **/
@@ -70,30 +70,22 @@ function statusReport() {
   let showButton = document.getElementById("hide-button");
   let hideButton = document.getElementById("spin-the-dice");
   let userName = document.getElementById("user-name").value;
+  let statusRedOrange = `Orange-Red Waring: Do something ${userName}, rub your nose for luck!! Hide the Ketchup!`;
+  let statusRed = `Red Alert: Do something extreme ${userName}, quick eat a rabbits tail!! Or you are going to be Alien Fast Food!`;
+  let statusOrange = `Orange Alert: ${userName}, as you Humans say, your head is above water!!`;
+  let statusGreen = `Go Green: Looking good ${userName}, you humans are a lucky species!!`;
 
   if (statusScore <= 0 && statusScore >= -5000) {
-    report.innerText =
-      "Orange-Red Waring: Do something " +
-      `${userName}` +
-      ", rub your nose for luck!! Hide the Ketchup!";
+    report.innerText = statusRedOrange;
     divStatus.style.borderColor = "orangered";
   } else if (statusScore <= -5001 && statusScore >= -9999) {
-    report.innerText =
-      "Red Alert: Do something extreme " +
-      `${userName}` +
-      " , Eat a rabbits tail!! You are going to be Alien Fast Food!";
+    report.innerText = statusRed;
     divStatus.style.borderColor = "red";
   } else if (statusScore >= 0 && statusScore <= 5000) {
-    report.innerText =
-      "Orange Alert: " +
-      `${userName}` +
-      ", as you Humans say, your head is above water!!";
+    report.innerText = statusOrange;
     divStatus.style.borderColor = "orange";
   } else if (statusScore >= 5001 && statusScore <= 9999) {
-    report.innerText =
-      "Go Green: Looking good " +
-      `${userName}` +
-      " you humans are a lucky race!!";
+    report.innerText = statusGreen;
     divStatus.style.borderColor = "green";
   } else if (statusScore >= 10000) {
     divStatus.innerHTML = `
