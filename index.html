@@ -1,120 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="James Tierney" />
-    <meta
-      name="description"
-      content="Learning to code and creating a simple game called Space Spondoolies"
-    />
 
-    <meta name="keywords" content="game, space, spondoolies, fun" />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="James Tierney">
+  <meta name="description" content="Learning to code and creating a simple game called Space Spondoolies" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/favicon_io/favicon-32x32.png"
-    />
+  <meta name="keywords" content="game, space, spondoolies, fun">
 
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Space Spondoolies!</title>
-  </head>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
 
-  <body>
-    <!--Header-->
-    <header>
-      <h1>Space Spondoolies!!</h1>
-      <h5>
-        [Hello You Lucky Human - Like! To Play A Game And Win A Trip In A Space
-        Ship]
-      </h5>
-    </header>
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Space Spondoolies!</title>
+</head>
 
-    <!--Dice One-->
-    <article class="box-half box-left">
-      <h2>Dice One -</h2>
-      <h3 id="dice-one">0</h3>
-    </article>
+<body>
+  <!--Header-->
+  <header>
+    <h1>Space Spondoolies!!</h1>
+    <h5>
+      [Hello You Lucky Human - Like! To Play A Game And Win A Trip In A Space
+      Ship]
+    </h5>
+  </header>
 
-    <!--Dice Two-->
-    <article class="box-half box-right">
-      <h2>Dice Two -</h2>
-      <h3 id="dice-two">0</h3>
-    </article>
+  <!--Dice One-->
+  <article class="box-half box-left">
+    <h2>Dice One -</h2>
+    <h3 id="dice-one">0</h3>
+  </article>
 
-    <!-- Score Board-->
-    <article id="div-score" class="box-half box-left">
-      <h2>Space Spondoolies:</h2>
-      <h3 id="total-score">0</h3>
-    </article>
+  <!--Dice Two-->
+  <article class="box-half box-right">
+    <h2>Dice Two -</h2>
+    <h3 id="dice-two">0</h3>
+  </article>
 
-    <!-- Status Report-->
-    <article id="div-status" class="box-half box-right">
-      <h2>Status Report:</h2>
-      <p id="status-report">
-        Enter your name, or just be a boring Human....Press: Spin The
-        Dice....Updating.....
-      </p>
-      <h1 id="bonus-points" class="bonus-hide">Bonus Points!</h1>
-    </article>
+  <!-- Score Board-->
+  <article id="div-score" class="box-half box-left">
+    <h2>Space Spondoolies:</h2>
+    <h3 id="total-score">0</h3>
+  </article>
 
-    <!--Buttons-->
-    <article class="box-full">
-      <button data-type="spin" id="spin-the-dice" class="my-button">
-        Spin The Dice
-      </button>
+  <!-- Status Report-->
+  <article id="div-status" class="box-half box-right">
+    <h2>Status Report:</h2>
+    <p id="status-report">
+      Enter your name, or just be a boring Human....Press: Spin The
+      Dice....Updating.....
+    </p>
+    <h2 id="bonus-points" class="bonus-hide">Bonus Points!></h2>
+  </article>
 
-      <button
-        onClick="window.location.reload(true);"
-        id="hide-button"
-        class="my-button-hide my-button"
-      >
-        Reload
-      </button>
+  <!--Buttons-->
+  <article class="box-full">
+    <button data-type="spin" id="spin-the-dice" class="my-button">
+      Spin The Dice
+    </button>
 
-      <input
-        id="user-name"
-        class=""
-        type="text"
-        id="fname"
-        name="fname"
-        value="Human"
-      /><br />
-    </article>
+    <button onClick="window.location.reload(true);" id="hide-button" class="my-button-hide my-button">
+      Reload
+    </button>
+    <h2>Enter User-Name Human!</h2>
+    <input id="user-name" class="" type="text" name="fname" value="Human" /><br />
+  </article>
 
-    <!--Alien Terms and Conditions-->
-    <section>
-      <h2>Space Spondoolies!</h2>
-      <h3>Alien Terms and Conditions</h3>
-      <p>
-        Hello Human, when you press the button you are going to space. Get a
-        high score and you spend eternity onboard our luxury Mother-Ship. Get a
-        low score, you still go to space, in our catering ship.
-        <em>Yummy!!</em>
-      </p>
+  <!--Alien Terms and Conditions-->
+  <section>
+    <h2>Space Spondoolies!</h2>
+    <h3>Alien Terms and Conditions</h3>
+    <p>
+      Hello Human, when you press the button you are going to space. Get a
+      high score and you spend eternity onboard our luxury Mother-Ship. Get a
+      low score, you still go to space, in our catering ship.
+      <em>Yummy!!</em>
+    </p>
 
-      <ul>
-        <li>Even Dice Score - Plus Points</li>
-        <li>Odd Dice Score - Minus Points</li>
-        <li>Throw a Double - Extra 500 Points</li>
-        <li>10,000 Space Spondoolies - A life time of luxury awaits you!</li>
-        <li>
-          Hit -10,000 - It's the Catering Ship. (The Star-Ship <em>Yum Yum</em>)
-          will collect you!
-        </li>
-      </ul>
-    </section>
+    <ul>
+      <li>Even Dice Score - Plus Points</li>
+      <li>Odd Dice Score - Minus Points</li>
+      <li>Throw a Double - Extra 500 Points</li>
+      <li>10,000 Space Spondoolies - A life time of luxury awaits you!</li>
+      <li>
+        Hit -10,000 - It's the Catering Ship. (The Star-Ship <em>Yum Yum</em>)
+        will collect you!
+      </li>
+    </ul>
+  </section>
 
-    <!--Footer-->
-    <footer>
-      <h2>[Some Day Soon A Space Ship Is Coming For You!]</h2>
-    </footer>
+  <!--Footer-->
+  <footer>
+    <h2>[Some Day Soon A Space Ship Is Coming For You!]</h2>
+  </footer>
 
-    <!--JavaScript Link-->
-    <script src="assets/javascript/main.js"></script>
-  </body>
+  <!--JavaScript Link-->
+  <script src="assets/javascript/main.js"></script>
+</body>
+
 </html>
