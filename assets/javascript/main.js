@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         totalScore();
         statusReport();
         document.getElementById("user-name").classList.add("my-button-hide");
+        document.getElementById("user-name-head").classList.add("my-button-hide");
       } else {
         alert("Pressed");
       }
