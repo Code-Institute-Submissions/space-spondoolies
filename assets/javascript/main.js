@@ -99,7 +99,7 @@ function scoreBoard() {
   let bonusPoints = document.getElementById("bonus-points");
 
   if (diceOne() === diceTwo()) { //Bonus Points for a double.
-    allDice += 4000 - allDice; 
+    allDice += 2500 - allDice; 
     bonusPoints.classList.toggle("bonus-hide");
     return[allDice]
   } else if (allDice % 2 === 0) { //Even numbers.
