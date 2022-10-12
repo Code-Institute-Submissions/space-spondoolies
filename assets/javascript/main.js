@@ -117,10 +117,12 @@ function statusReport() {
  * The return values are stored in a array to allow scores to increment or decrement.
  **/
 function scoreBoard() {
-  let allDice = diceOne() + diceTwo();
+  let dieOne = diceOne();
+  let dieTwo = diceTwo();
+  let allDice = dieOne + dieTwo;
   let bonusPoints = document.getElementById("bonus-points");
 
-  if (diceOne() === diceTwo()) {
+  if (dieOne === dieTwo) {
     //Bonus Points for a double.
     allDice += 2500 - allDice;
     bonusPoints.classList.toggle("bonus-hide");
