@@ -82,12 +82,12 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
       }
 
       output.push(
-        '<div class="question-quiz">' +
+        '<p class="question-quiz"><b>' +
           questions[i].question +
-          "</div>" +
-          '<div class="answers-quiz">' +
+          "</b></p>" +
+          '<p class="answers-quiz">' +
           answers.join("") +
-          "</div>"
+          "</p>"
       );
     }
 

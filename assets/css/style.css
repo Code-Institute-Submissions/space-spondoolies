@@ -52,11 +52,11 @@ article {
   background-color: black;
   border-radius: 5px;
   border-width: 5px;
+  margin: 1% 1%;
 }
 
-section {
-  display: inline;
-  margin: 1% 0 1% 0;
+.section-box {
+  margin-top: 100px;
 }
 
 /* Float article left for dashboard */
@@ -88,6 +88,7 @@ section {
   height: 80px;
   background-color: brown;
   border: brown;
+  margin: 2% 2%;
 }
 
 input[type="text"] {
@@ -143,6 +144,21 @@ input[type="text"] {
   display: none;
 }
 
+.question-quiz {
+  padding: 1% 1%;
+}
+
+.answers-quiz {
+  padding: 1% 1%;
+}
+
+input[type="radio"] {
+  background-color: #fff;
+  margin-left: 50px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
 button {
   display: inline-block;
   color: brown;
@@ -185,31 +201,6 @@ footer {
   }
 }
 
-/*Quiz CSS*/
-
-.question-quiz{
-	font-weight: 600;
-}
-
-.answers-quiz {
-    margin-bottom: 20px;
-}
-
-#submit-quiz{
-	font-size: 20px;
-	background-color: black;
-	border: 0px;
-	border-radius: 3px;
-	padding: 20px;
-	cursor: pointer;
-	margin-bottom: 20px;
-}
-
-#submit-quiz:hover{
-	background-color: #3a8;
-}
-
-/*Quiz CSS End*/
 
 /**************************************/
 /* Media Queries for smaller screens */
