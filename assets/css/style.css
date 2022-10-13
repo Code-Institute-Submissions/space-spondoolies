@@ -56,7 +56,12 @@ article {
 }
 
 .section-box {
-  margin-top: 100px;
+  margin-top: 50px;
+}
+
+.section-box h2 {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 /* Float article left for dashboard */
@@ -152,11 +157,18 @@ input[type="text"] {
   padding: 1% 1%;
 }
 
+.quiz {
+  text-align: center;
+}
+
 input[type="radio"] {
   background-color: #fff;
   margin-left: 50px;
   margin-right: 5px;
   border-radius: 50%;
+  transition: 0.5s all linear;
+  width: 20px;
+  height: 20px;
 }
 
 button {

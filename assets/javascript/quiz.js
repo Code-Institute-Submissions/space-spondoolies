@@ -39,7 +39,7 @@ var spaceQuestions = [
     correctAnswer: "c",
   },
   {
-    question: "About hold old is the Earth's solar system?",
+    question: "About how old is the Earth's solar system?",
     answers: {
       a: "4.6 billion years old",
       b: "1.6 billion years old",
@@ -93,11 +93,11 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
 
     quizBox.innerHTML = output.join("");
   }
-  // theQuestions() End
 
+  // theQuestions() End
   function theResults(questions, quizBox, resultsBox) {
     // gather answer containers from our quiz
-    var answerBoxs = quizBox.querySelectorAll(".answers-quiz");
+    var answerBoxes = quizBox.querySelectorAll(".answers-quiz");
 
     // keep track of user's answers
     var userAnswer = "";
@@ -107,7 +107,7 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
     for (var i = 0; i < questions.length; i++) {
       // find selected answer
       userAnswer = (
-        answerBoxs[i].querySelector("input[name=question" + i + "]:checked") ||
+        answerBoxes[i].querySelector("input[name=question" + i + "]:checked") ||
         {}
       ).value;
 
@@ -117,12 +117,12 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
         numCorrect++;
 
         // color the answers green
-        answerBoxs[i].style.color = "lightgreen";
+        answerBoxes[i].style.color = "yellow";
       }
       // if answer is wrong or blank
       else {
         // color the answers red
-        answerBoxs[i].style.color = "red";
+        answerBoxes[i].style.color = "red";
       }
     }
 
@@ -133,7 +133,9 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
 
   theQuestions(questions, quizBox);
 
-  submitButton.onclick = function () {
+  submitButton.addEventListener("click", function() {
     theResults(questions, quizBox, resultsBox);
-  };
+    alert = function() {};
+  });
+
 }
