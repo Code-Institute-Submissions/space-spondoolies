@@ -50,7 +50,14 @@ var spaceQuestions = [
 ];
 // Space Questions End
 
+var quizBox = document.getElementById("quiz-quiz");
+var resultsBox = document.getElementById("results-quiz");
+var submitButton = document.getElementById("submit-quiz");
+
+spaceQuiz(spaceQuestions, quizBox, resultsBox, submitButton);
+
 function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
+
   function theQuestions(questions, quizBox) {
     // store the output and the answer choices
     var output = [];
@@ -75,10 +82,10 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
       }
 
       output.push(
-        '<div class="question">' +
+        '<div class="question-quiz">' +
           questions[i].question +
           "</div>" +
-          '<div class="answers">' +
+          '<div class="answers-quiz">' +
           answers.join("") +
           "</div>"
       );
@@ -90,7 +97,7 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
 
   function theResults(questions, quizBox, resultsBox) {
     // gather answer containers from our quiz
-    var answerBoxs = quizBox.querySelectorAll(".answers");
+    var answerBoxs = quizBox.querySelectorAll(".answers-quiz");
 
     // keep track of user's answers
     var userAnswer = "";
@@ -130,9 +137,3 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
     theResults(questions, quizBox, resultsBox);
   };
 }
-
-var quizBox = document.getElementById("quiz-quiz");
-var resultsBox = document.getElementById("results-quiz");
-var submitButton = document.getElementById("submit-quiz");
-
-generateQuiz(myQuestions, quizBox, resultsBox, submitButton);

@@ -185,6 +185,32 @@ footer {
   }
 }
 
+/*Quiz CSS*/
+
+.question-quiz{
+	font-weight: 600;
+}
+
+.answers-quiz {
+    margin-bottom: 20px;
+}
+
+#submit-quiz{
+	font-size: 20px;
+	background-color: black;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+#submit-quiz:hover{
+	background-color: #3a8;
+}
+
+/*Quiz CSS End*/
+
 /**************************************/
 /* Media Queries for smaller screens */
 @media screen and (max-width: 800px) {
