@@ -162,13 +162,12 @@ input[type="text"] {
 }
 
 input[type="radio"] {
-  background-color: #fff;
   margin-left: 50px;
   margin-right: 5px;
-  border-radius: 50%;
   transition: 0.5s all linear;
   width: 20px;
   height: 20px;
+  border-radius: 50%;
 }
 
 button {

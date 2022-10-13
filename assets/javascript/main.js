@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 let hideElements = () => {
   document.getElementById("user-name").classList.add("my-button-hide");
   document.getElementById("user-name-head").classList.add("my-button-hide");
+  document.getElementById("hide-section").classList.add("my-button-hide");
 };
 
 /**
