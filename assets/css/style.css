@@ -7,7 +7,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto Mono", monospace;
-  color: white;
 }
 
 body {
@@ -20,29 +19,35 @@ header {
   margin: 2.5% 0 2.5% 0;
   height: 50px;
   text-align: center;
+  color: white;
 }
 
 h1 {
   font-size: 3rem;
+  color: white;
 }
 
 h4 {
   text-align: center;
   margin-left: 3%;
+  color: white;
 }
 
 h1,
 h2,
 h3 {
   padding: 10px 10px;
+  color: white;
 }
 
 h5 {
   padding-bottom: 5px;
+  color: white;
 }
 
 p {
   width: 98%;
+  color: white;
 }
 
 article {
@@ -69,7 +74,9 @@ article {
 }
 
 .border-white:hover {
-  border: 1px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-width: 75%;
 }
 
 /* Float article left for dashboard */
@@ -114,6 +121,7 @@ input[type="text"] {
   text-align: center;
   font-size: large;
   background-color: black;
+  color: white;
 }
 
 /* Text sizing for dashboard */
@@ -158,12 +166,16 @@ input[type="text"] {
   display: none;
 }
 
+/* Space Quiz */
 .question-quiz {
   padding: 1% 1%;
+  color: whitesmoke;
+  font-weight: 900;
 }
 
 .answers-quiz {
   padding: 1% 1%;
+  color: whitesmoke;
 }
 
 .quiz {
@@ -190,6 +202,7 @@ ul {
 
 li {
   list-style-image: url(../images/favicon_io/favicon-16x16.png);
+  color: white;
 }
 
 footer {

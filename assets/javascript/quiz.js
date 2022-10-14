@@ -117,12 +117,12 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
         numCorrect++;
 
         // color the answers green
-        answerBoxes[i].style.color = "yellow";
+        answerBoxes[i].style.color = "whitesmoke";
       }
       // if answer is wrong or blank
       else {
         // color the answers red
-        answerBoxes[i].style.color = "red";
+        answerBoxes[i].style.color = "brown";
       }
     }
 
