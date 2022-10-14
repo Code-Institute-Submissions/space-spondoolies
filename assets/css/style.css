@@ -64,6 +64,14 @@ article {
   font-size: 1.5rem;
 }
 
+.border-white {
+  border: none;
+}
+
+.border-white:hover {
+  border: 1px solid white;
+}
+
 /* Float article left for dashboard */
 .box-left {
   float: left;
@@ -91,8 +99,8 @@ article {
   display: inline-block;
   width: 100%;
   height: 80px;
-  background-color: brown;
-  border: brown;
+  background-color: inherit;
+  border: none;
   margin: 2% 2%;
 }
 
@@ -102,6 +110,7 @@ input[type="text"] {
   width: 50%;
   height: 30px;
   margin-left: 25%;
+  margin-top: 10px;
   text-align: center;
   font-size: large;
   background-color: black;
