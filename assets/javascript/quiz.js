@@ -1,7 +1,10 @@
-// Space Quiz
+/**
+ * Space Quiz
+ * Adapted from a quiz game from the "JS - Novice to Ninja" book.
+ * **/ 
 
 // Space Questions
-var spaceQuestions = [
+let spaceQuestions = [
   {
     question: "What was the first mammal in space?",
     answers: {
@@ -50,9 +53,9 @@ var spaceQuestions = [
 ];
 // Space Questions End
 
-var quizBox = document.getElementById("quiz-quiz");
-var resultsBox = document.getElementById("results-quiz");
-var submitButton = document.getElementById("submit-quiz");
+let quizBox = document.getElementById("quiz-quiz");
+let resultsBox = document.getElementById("results-quiz");
+let submitButton = document.getElementById("submit-quiz");
 
 spaceQuiz(spaceQuestions, quizBox, resultsBox, submitButton);
 
@@ -60,10 +63,10 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
 
   function theQuestions(questions, quizBox) {
     // store the output and the answer choices
-    var output = [];
-    var answers;
+    let output = [];
+    let answers;
 
-    for (var i = 0; i < questions.length; i++) {
+    for (let i = 0; i < questions.length; i++) {
       answers = [];
 
       for (letter in questions[i].answers) {
@@ -97,14 +100,14 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
   // theQuestions() End
   function theResults(questions, quizBox, resultsBox) {
     // gather answer containers from our quiz
-    var answerBoxes = quizBox.querySelectorAll(".answers-quiz");
+    let answerBoxes = quizBox.querySelectorAll(".answers-quiz");
 
     // keep track of user's answers
-    var userAnswer = "";
-    var numCorrect = 0;
+    let userAnswer = "";
+    let numCorrect = 0;
 
     // for each question...
-    for (var i = 0; i < questions.length; i++) {
+    for (let i = 0; i < questions.length; i++) {
       // find selected answer
       userAnswer = (
         answerBoxes[i].querySelector("input[name=question" + i + "]:checked") ||

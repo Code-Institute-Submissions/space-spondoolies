@@ -182,6 +182,13 @@ input[type="text"] {
   text-align: center;
 }
 
+.para-nth p:nth-child(odd) {
+  background-color: #CD7F32;
+  width: 75%;
+  border-radius: 5px;
+}
+
+
 input[type="radio"] {
   margin-left: 50px;
   margin-right: 5px;
