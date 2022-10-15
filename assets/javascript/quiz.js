@@ -62,8 +62,8 @@ spaceQuiz(spaceQuestions, quizBox, resultsBox, submitButton);
 function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
 
   function theQuestions(questions, quizBox) {
-    // store the output and the answer choices
-    let output = [];
+    
+    let output = []; // store the output and the answer choices
     let answers;
 
     for (let i = 0; i < questions.length; i++) {
@@ -96,8 +96,9 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
 
     quizBox.innerHTML = output.join("");
   }
-
   // theQuestions() End
+
+  // theResults()  
   function theResults(questions, quizBox, resultsBox) {
     // gather answer containers from our quiz
     let answerBoxes = quizBox.querySelectorAll(".answers-quiz");
@@ -106,39 +107,30 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
     let userAnswer = "";
     let numCorrect = 0;
 
-    // for each question...
-    for (let i = 0; i < questions.length; i++) {
-      // find selected answer
-      userAnswer = (
-        answerBoxes[i].querySelector("input[name=question" + i + "]:checked") ||
-        {}
-      ).value;
+    for (let i = 0; i < questions.length; i++) { // for each question
+      
+      userAnswer = (answerBoxes[i].querySelector("input[name=question" + i + "]:checked") || {}).value; // find selected answer
 
-      // if answer is correct
-      if (userAnswer === questions[i].correctAnswer) {
-        // add to the number of correct answers
-        numCorrect++;
-
-        // color the answers green
-        answerBoxes[i].style.color = "whitesmoke";
-      }
-      // if answer is wrong or blank
-      else {
-        // color the answers red
-        answerBoxes[i].style.color = "brown";
+      if (userAnswer === questions[i].correctAnswer) { // if answer is correct
+        numCorrect++; // add to the number of correct answers
+        answerBoxes[i].style.color = "whitesmoke"; // color the answers green
+      } else { // if answer is wrong or blank
+        answerBoxes[i].style.color = "brown"; // color the answers red
       }
     }
+    
+    resultsBox.innerHTML = numCorrect + " out of " + questions.length; // show number of correct answers out of total
 
-    // show number of correct answers out of total
-    resultsBox.innerHTML = numCorrect + " out of " + questions.length;
   }
   // theResults() End
 
+  // theQuestions()
   theQuestions(questions, quizBox);
 
+  // EventListener
   submitButton.addEventListener("click", function() {
     theResults(questions, quizBox, resultsBox);
     alert = function() {};
   });
-
+  // EventListener End
 }

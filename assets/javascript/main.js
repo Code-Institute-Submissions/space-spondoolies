@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
         totalScore();
         statusReport();
         hideElements();
+        spaceQuizScore();
+        spaceQuizReport();
       } else {
         alert("Pressed");
       }
@@ -65,7 +67,7 @@ function diceTwo() {
  * is used to update the status.
  * */
 function statusReport() {
-  let statusScore = parseInt(document.getElementById("total-score").innerText); // Grab current score from main dashboard to use for logic decision making.
+  let statusScore = parseInt(document.getElementById("total-score").innerText); // Capture current score from main dashboard to use for logic decision making.
   let report = document.getElementById("status-report");
   let divStatus = document.getElementById("div-status");
   let showButton = document.getElementById("hide-button");
@@ -145,10 +147,52 @@ function scoreBoard() {
 }
 
 /**
- * Grab current score from dashboard and add/subtract new score from scoreboard() function.
+ * Capture score from Space Quiz.
+ **/
+ function spaceQuizScore() {
+  let quizScore = parseInt(document.getElementById("results-quiz").innerText[0]);
+  return parseInt(quizScore);
+ }
+
+/**
+ * Report Space Quiz.
+ **/
+ function spaceQuizReport() {
+
+  let quizScore = spaceQuizScore();
+  let quizReport = document.getElementById("space-quiz-report");
+
+  if (quizScore === 0) {
+    quizReport.innerText = "No quiz bonus points, back to space school for you!"
+    return 0;
+  } else if (quizScore === 1) {
+    quizReport.innerText = "You got 50 quiz bonus points"
+    return 50;
+  } else if (quizScore === 2) {
+    quizReport.innerText = "You got 100 quiz bonus points"
+    return 100;
+  } else if (quizScore === 3) {
+    quizReport.innerText = "You got 150 quiz bonus points"
+    return 150;
+  } else if (quizScore === 4) {
+    quizReport.innerText = "Yo go 200 quiz bonus points"
+    return 200;
+  } else if (quizScore === 5) {
+    quizReport.innerText = "You got 250 quiz bonus points"
+    return 250;
+  } else {
+    quizReport = "Did you do the quiz? Go to space school!"
+    return 0;
+  }
+  
+}
+
+/**
+ * Capture current score from dashboard and add/subtract new score from scoreboard() function.
  **/
 function totalScore() {
+  let alienQuizScore = spaceQuizReport();
   let oldScore = parseInt(document.getElementById("total-score").innerText);
-  document.getElementById("total-score").innerText =
-    oldScore + parseInt(scoreBoard());
+  document.getElementById("total-score").innerText = oldScore + parseInt(scoreBoard()) + alienQuizScore;
 }
+
