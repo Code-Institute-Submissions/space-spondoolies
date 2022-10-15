@@ -3,7 +3,7 @@
  * Adapted from a quiz game from the "JS - Novice to Ninja" book.
  * **/ 
 
-// Space Questions
+// Space Questions and Answers
 let spaceQuestions = [
   {
     question: "What was the first mammal in space?",
@@ -57,20 +57,20 @@ let quizBox = document.getElementById("quiz-quiz");
 let resultsBox = document.getElementById("results-quiz");
 let submitButton = document.getElementById("submit-quiz");
 
-spaceQuiz(spaceQuestions, quizBox, resultsBox, submitButton);
+spaceQuiz(spaceQuestions, quizBox, resultsBox, submitButton); // Calling Space Quiz
 
 function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
 
   function theQuestions(questions, quizBox) {
     
-    let output = []; // store the output and the answer choices
-    let answers;
+    let output = []; // Store the output and the answer choices
+    let answers;    // Variable to store answers
 
     for (let i = 0; i < questions.length; i++) {
-      answers = [];
+      answers = []; // store the answers
 
       for (letter in questions[i].answers) {
-        answers.push(
+        answers.push( // filling the answers array
           "<label>" +
             '<input type="radio" name="question' +
             i +
@@ -84,7 +84,7 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
         );
       }
 
-      output.push(
+      output.push( // filling the output array
         '<p class="question-quiz"><b>' +
           questions[i].question +
           "</b></p>" +
