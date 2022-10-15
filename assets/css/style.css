@@ -81,7 +81,7 @@ article {
 .border-white:hover {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  border-width: 75%;
+  width: 99%
 }
 
 /* Float article left for dashboard */

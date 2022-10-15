@@ -1,116 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="James Tierney">
-        <meta name="description" content="Learning to code and creating a simple game called Space Spondoolies">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="James Tierney">
+    <meta name="description" content="Learning to code and creating a simple game called Space Spondoolies">
 
-        <meta name="keywords" content="game, space, spondoolies, fun">
+    <meta name="keywords" content="game, space, spondoolies, fun">
 
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_io/favicon-32x32.png">
 
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <title>Space Spondoolies!</title>
-    </head>
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Space Spondoolies!</title>
+</head>
 
-    <body>
-        <!--Header-->
-        <header>
-            <h1>Space Spondoolies!!</h1>
-            <h5>
-                [Hello You Lucky Human - Like! To Play A Game And Win A Trip In A Space Ship <em>(Forever!)</em>]
-            </h5>
-            <p><a href="#terms">[Alien Terms & Conditions]</a></p>
-        </header>
+<body>
+    <!--Header-->
+    <header>
 
-        <!--Dice One-->
-        <article class="box-half box-left">
-            <h2>Dice One -</h2>
-            <h3 id="dice-one">0</h3>
-        </article>
+        <h1>Space Spondoolies!!</h1>
+        <h5>
+            [Hello You Lucky Human - Like! To Play A Game And Win A Trip In A Space Ship <em>(Forever!)</em>]
+        </h5>
+        <p><a href="#terms">[Alien Terms & Conditions]</a></p>
 
-        <!--Dice Two-->
-        <article class="box-half box-right">
-            <h2>Dice Two -</h2>
-            <h3 id="dice-two">0</h3>
-        </article>
+    </header>
 
-        <!-- Score Board-->
-        <article id="div-score" class="box-half box-left">
-            <h2>Space Spondoolies:</h2>
-            <h3 id="total-score">0</h3>
-        </article>
+    <!--Dice One-->
+    <article class="box-half box-left">
 
-        <!-- Status Report-->
-        <article id="div-status" class="box-half box-right">
-            <h2>Status Report:</h2>
-            <p id="status-report">
-                Enter your name, or just be a boring Human....Press: Spin The
-                      Dice....Updating.....
-            </p><br>
-            <p id="space-quiz-report"></p>
-            <h2 id="bonus-points" class="bonus-hide">Bonus Points!</h2>
-        </article>
+        <h2>Dice One -</h2>
+        <h3 id="dice-one">0</h3>
 
-        <!--Buttons-->
-            <aside class="box-full">
-                <button data-type="spin" id="spin-the-dice" class="my-button">
-                    Spin The Dice
-                </button>
+    </article>
 
-                <button onclick="window.location.reload(true); alert = function() {};" id="hide-button" class="my-button-hide my-button">
-                    Reload
-                </button>
-            </aside>
+    <!--Dice Two-->
+    <article class="box-half box-right">
 
-            <aside class="box-full">
-                <h4 id="user-name-head" class="">Enter User-Name Human!</h4>
-                <input id="user-name" class="" type="text" name="fname" value="Human"><br>
-            </aside>
+        <h2>Dice Two -</h2>
+        <h3 id="dice-two">0</h3>
 
-        <!--Space Quiz-->
-        <section class="section-box border-white" id="hide-section">
-            <h2>The Space Quiz</h2>
-            <p class="quiz">[Human Intelligence Test]</p>
-            <aside id="quiz-quiz" class="quiz para-nth"></aside>
-            <h2 id="results-quiz">0</h2>
-            <button id="submit-quiz" class="my-button">Space Quiz Results</button>
-        </section>
+    </article>
 
-        <!--Alien Terms and Conditions-->
-        <section class="section-box border-white" id="terms">
-            <h2>Space Spondoolies!</h2>
-            <h3>Alien Terms and Conditions</h3>
-            <p>
-                Hello Human, when you press the button you are going to space. Get a
-                      high score and you spend eternity onboard our luxury Mother-Ship. Get a
-                      low score, you still go to space, in our catering ship.
-                <em>Yummy!!</em>
-            </p>
+    <!-- Score Board-->
+    <article id="div-score" class="box-half box-left">
 
-            <ul>
-                <li>Even Dice Score - Plus Points</li>
-                <li>Odd Dice Score - Minus Points</li>
-                <li>Throw a Double - Extra 500 Points</li>
-                <li>10,000 Space Spondoolies - A life time of luxury awaits you!</li>
-                <li>-10,000 Space Spondoolies - It's the Catering Ship. The Star-Ship(<em>Yum Yum</em>)will collect you!
-                </li>
-                <li>Score in the Space Quiz and get bonus points in every round of the Dice Throw!!</li>
-            </ul>
-        </section>
+        <h2>Space Spondoolies:</h2>
+        <h3 id="total-score">0</h3>
 
-        <!--Footer-->
-        <footer>
-            <h2>[Some Day Soon A Space Ship Is Coming For You!]</h2>
-        </footer>
+    </article>
 
-        <!--JavaScript Link-->
-        <script src="assets/javascript/main.js"></script>
-        <script src="assets/javascript/quiz.js"></script>
-    </body>
+    <!-- Status Report-->
+    <article id="div-status" class="box-half box-right">
+
+        <h2>Status Report:</h2>
+        <p id="status-report">
+            Enter your name, or just be a boring Human....Press: Spin The
+            Dice....Updating.....
+        </p><br>
+        <p id="space-quiz-report"></p>
+        <h2 id="bonus-points" class="bonus-hide">Bonus Points!</h2>
+
+    </article>
+
+    <!--Buttons-->
+    <aside class="box-full">
+
+        <button data-type="spin" id="spin-the-dice" class="my-button">
+            Spin The Dice
+        </button>
+
+        <button onclick="window.location.reload(true); alert = function() {};" id="hide-button"
+            class="my-button-hide my-button">
+            Reload
+        </button>
+
+    </aside>
+
+    <aside class="box-full">
+
+        <h4 id="user-name-head" class="">Enter User-Name Human!</h4>
+        <input id="user-name" class="" type="text" name="fname" value="Human"><br>
+
+    </aside>
+
+    <!--Space Quiz-->
+    <section class="section-box border-white" id="hide-section">
+
+        <h2>The Space Quiz</h2>
+        <p class="quiz">[Human Intelligence Test]</p>
+
+        <form id="quiz-quiz" class="quiz para-nth">
+
+        </form>
+
+        <h2 id="results-quiz">0</h2>
+        <button id="submit-quiz" class="my-button">Space Quiz Results</button>
+
+    </section>
+
+    <!--Alien Terms and Conditions-->
+    <section class="section-box border-white" id="terms">
+
+        <h2>Space Spondoolies!</h2>
+        <h3>Alien Terms and Conditions</h3>
+        <p>
+            Hello Human, when you press the button you are going to space. Get a
+            high score and you spend eternity onboard our luxury Mother-Ship. Get a
+            low score, you still go to space, in our catering ship.
+            <em>Yummy!!</em>
+        </p>
+
+        <ul>
+            <li>Even Dice Score - Plus Points</li>
+            <li>Odd Dice Score - Minus Points</li>
+            <li>Throw a Double - Extra 500 Points</li>
+            <li>10,000 Space Spondoolies - A life time of luxury awaits you!</li>
+            <li>-10,000 Space Spondoolies - It's the Catering Ship. The Star-Ship(<em>Yum Yum</em>)will collect you!
+            </li>
+            <li>Score in the Space Quiz and get bonus points in every round of the Dice Throw!!</li>
+        </ul>
+
+    </section>
+
+    <!--Footer-->
+    <footer>
+
+        <h2>[Some Day Soon A Space Ship Is Coming For You!]</h2>
+
+    </footer>
+
+    <!--JavaScript Link-->
+    <script src="assets/javascript/main.js"></script>
+    <script src="assets/javascript/quiz.js"></script>
+</body>
 
 </html>
