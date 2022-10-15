@@ -57,7 +57,7 @@ let quizBox = document.getElementById("quiz-quiz");
 let resultsBox = document.getElementById("results-quiz");
 let submitButton = document.getElementById("submit-quiz");
 
-spaceQuiz(spaceQuestions, quizBox, resultsBox, submitButton); // Calling Space Quiz
+spaceQuiz(spaceQuestions, quizBox, resultsBox, submitButton); //Calling spaceQuiz and variables
 
 function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
 
