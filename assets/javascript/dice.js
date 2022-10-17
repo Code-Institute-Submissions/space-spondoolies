@@ -56,28 +56,29 @@ function diceOne() {
   let theDice = Math.floor(Math.random() * 6 + 1); // generate random number and floor it to an int.
   let diceOneId = document.getElementById("dice-one");
   //diceOneId.innerText = theDice; // Sent to dice one window. 
+  //console.log(theDice); //checking images match dice throw.
 
 switch (theDice) {
-  case 0:
+  case 1:
     diceOneId.src = "/assets/images/favicon_io/dice-six-faces-one.png";
     break;
-  case 1:
+  case 2:
     diceOneId.src = "/assets/images/favicon_io/dice-six-faces-two.png";
     break;
-  case 2:
+  case 3:
     diceOneId.src = "/assets/images/favicon_io/dice-six-faces-three.png";
     break;
-  case 3:
+  case 4:
     diceOneId.src = "/assets/images/favicon_io/dice-six-faces-four.png";
     break;
-  case 4:
+  case 5:
     diceOneId.src = "/assets/images/favicon_io/dice-six-faces-five.png";
     break;
-  case 5:
+  case 6:
     diceOneId.src = "/assets/images/favicon_io/dice-six-faces-six.png";
     break;
   default:
-    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-one.png"
+    diceOneId.src = "/assets/images/favicon_io/android-chrome-192x192.png"
 }
 
   return theDice;
@@ -90,28 +91,29 @@ function diceTwo() {
   let theDice = Math.floor(Math.random() * 6 + 1); // generate random number and floor it to an int.
   let diceTwoId = document.getElementById("dice-two");
   // diceTwoId.innerText = theDice; // Sent to dice two window.
+  //console.log(theDice); //checking images match dice throw.
 
   switch (theDice) {
-    case 0:
+    case 1:
       diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-one.png";
       break;
-    case 1:
+    case 2:
       diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-two.png";
       break;
-    case 2:
+    case 3:
       diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-three.png";
       break;
-    case 3:
+    case 4:
       diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-four.png";
       break;
-    case 4:
+    case 5:
       diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-five.png";
       break;
-    case 5:
+    case 6:
       diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-six.png";
       break;
     default:
-      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-one.png"
+      diceTwoId.src = "/assets/images/favicon_io/hungry_alien.png"
   }
 
   return theDice;
