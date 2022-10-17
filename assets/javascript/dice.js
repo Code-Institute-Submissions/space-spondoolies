@@ -55,7 +55,7 @@ let hideElements = () => {
 function diceOne() {
   let theDice = Math.floor(Math.random() * 6 + 1); // generate random number and floor it to an int.
   let diceOneId = document.getElementById("dice-one");
-  //diceOneId.innerText = theDice; // Sent to dice one window.
+  //diceOneId.innerText = theDice; // Sent to dice one window. 
 
 switch (theDice) {
   case 0:
