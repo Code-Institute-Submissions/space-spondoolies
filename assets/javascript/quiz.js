@@ -119,7 +119,7 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
       }
     }
     
-    resultsBox.innerHTML = numCorrect + " out of " + questions.length; // show number of correct answers out of total
+    resultsBox.innerHTML = numCorrect + " out of " + questions.length + "<br>"; // show number of correct answers out of total
 
   }
   // theResults() End
@@ -130,7 +130,7 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
   // EventListener
   submitButton.addEventListener("click", function() {
     theResults(questions, quizBox, resultsBox);
-    alert = function() {};
+    alert = function() {}; // stop alert box from showing
   });
   // EventListener End
 }

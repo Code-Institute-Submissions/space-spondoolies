@@ -141,6 +141,16 @@ input[type="text"] {
   font-size: 4rem;
 }
 
+/* Dice Image*/
+.img-dice {
+  height: 95%;
+  width: 65%;
+  align-items: center;
+  padding-top: 2.5%;
+  z-index: 100;
+  margin: auto 15%;
+}
+
 /* Alien Images */
 #image-alien-512,
 #image-alien-hungry {

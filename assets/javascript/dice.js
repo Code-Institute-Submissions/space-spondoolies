@@ -55,7 +55,31 @@ let hideElements = () => {
 function diceOne() {
   let theDice = Math.floor(Math.random() * 6 + 1); // generate random number and floor it to an int.
   let diceOneId = document.getElementById("dice-one");
-  diceOneId.innerText = theDice; // Sent to dice one window.
+  //diceOneId.innerText = theDice; // Sent to dice one window.
+
+switch (theDice) {
+  case 0:
+    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-one.png";
+    break;
+  case 1:
+    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-two.png";
+    break;
+  case 2:
+    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-three.png";
+    break;
+  case 3:
+    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-four.png";
+    break;
+  case 4:
+    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-five.png";
+    break;
+  case 5:
+    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-six.png";
+    break;
+  default:
+    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-one.png"
+}
+
   return theDice;
 }
 
@@ -65,7 +89,31 @@ function diceOne() {
 function diceTwo() {
   let theDice = Math.floor(Math.random() * 6 + 1); // generate random number and floor it to an int.
   let diceTwoId = document.getElementById("dice-two");
-  diceTwoId.innerText = theDice; // Sent to dice two window.
+  // diceTwoId.innerText = theDice; // Sent to dice two window.
+
+  switch (theDice) {
+    case 0:
+      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-one.png";
+      break;
+    case 1:
+      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-two.png";
+      break;
+    case 2:
+      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-three.png";
+      break;
+    case 3:
+      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-four.png";
+      break;
+    case 4:
+      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-five.png";
+      break;
+    case 5:
+      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-six.png";
+      break;
+    default:
+      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-one.png"
+  }
+
   return theDice;
 }
 
@@ -185,7 +233,6 @@ function scoreBoard() {
   return parseInt(quizScore);
 
  }
-
 /**
  * Report Space Quiz correct answers and give it a value.
  * Display a report in the "Status Report Window".
@@ -194,13 +241,14 @@ function scoreBoard() {
 
   let quizScore = spaceQuizScore();
   let quizReport = document.getElementById("space-quiz-report");
+  let resultsBox = document.getElementById("results-quiz");
 
-  if (quizScore === 0) {
+    if (quizScore === 0) {
 
-    quizReport.innerText = "No Space Quiz bonus points, back to space school for you!"
-    return 0;
+      quizReport.innerText = "You got 0 quiz bonus points"
+      return 0;
 
-  } else if (quizScore === 1) {
+    } else if (quizScore === 1) {
 
     quizReport.innerText = "You got 50 quiz bonus points"
     return 50;
@@ -227,7 +275,7 @@ function scoreBoard() {
 
   } else {
 
-    quizReport = "Did you do the Space Quiz? Go to space school!"
+    quizReport = "No Space Quiz Points!!!"
     return 0;
 
   }
@@ -243,7 +291,7 @@ function totalScore() {
 
   let alienQuizScore = spaceQuizReport();
   let oldScore = parseInt(document.getElementById("total-score").innerText);
-  document.getElementById("total-score").innerText = oldScore + parseInt(scoreBoard()) + alienQuizScore;
+  document.getElementById("total-score").innerText = oldScore + parseInt(scoreBoard()) + parseInt(alienQuizScore);
 
 }
 
