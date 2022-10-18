@@ -29,94 +29,78 @@ document.addEventListener("DOMContentLoaded", function () {
  * Gather functions to use with eventListener.
 */
 function eventSubmit() {
-  diceOne();
-  diceTwo();
-  totalScore();
-  statusReport();
-  hideElements();
-  spaceQuizScore();
-  spaceQuizReport();
+  // diceOne();
+  // diceTwo();
+  // totalScore();
+  // statusReport();
+  // hideElements();
+  // spaceQuizScore();
+  // spaceQuizReport();
+  diceCssOne();
+  diceCssTwo();
 }
 
-/**
- * Function to hide elements on first click.
- * Also trying out a new way to declare a function.
- * It works!!!
- **/
-let hideElements = () => {
-  document.getElementById("user-name").classList.add("my-button-hide");
-  document.getElementById("user-name-head").classList.add("my-button-hide");
-  document.getElementById("hide-section").classList.add("my-button-hide");
-};
-
-/**
- * Function to give a random number between 1 and 6 to mimic a dice number. Dice one of two.
- **/
-function diceOne() {
-  let theDice = Math.floor(Math.random() * 6 + 1); // generate random number and floor it to an int.
-  let diceOneId = document.getElementById("dice-one");
-  //diceOneId.innerText = theDice; // Sent to dice one window. 
-  //console.log(theDice); //checking images match dice throw.
-
-switch (theDice) {
-  case 1:
-    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-one.png";
-    break;
-  case 2:
-    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-two.png";
-    break;
-  case 3:
-    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-three.png";
-    break;
-  case 4:
-    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-four.png";
-    break;
-  case 5:
-    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-five.png";
-    break;
-  case 6:
-    diceOneId.src = "/assets/images/favicon_io/dice-six-faces-six.png";
-    break;
-  default:
-    diceOneId.src = "/assets/images/favicon_io/android-chrome-192x192.png"
+function randomDice () {
+  let diceNumber = Math.floor(Math.random() * 6 + 1);
+  return diceNumber;
 }
 
-  return theDice;
-}
-
-/**
- * Function to give a random number between 1 and 6 to mimic a dice number. Dice two of two.
- **/
-function diceTwo() {
-  let theDice = Math.floor(Math.random() * 6 + 1); // generate random number and floor it to an int.
-  let diceTwoId = document.getElementById("dice-two");
-  // diceTwoId.innerText = theDice; // Sent to dice two window.
-  //console.log(theDice); //checking images match dice throw.
-
-  switch (theDice) {
-    case 1:
-      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-one.png";
+function diceNumber () {
+  let diceNum = randomDice();
+  switch (diceNum) {
+      case 1:
+          return dice = ["#000","#000","#000","#000","#fff","#000","#000","#000","#000"];
       break;
-    case 2:
-      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-two.png";
+      case 2:
+          return dice = ["#000","#000","#fff","#000","#000","#000","#fff","#000","#000"];
       break;
-    case 3:
-      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-three.png";
+      case 3:
+          return dice = ["#000","#000","#fff","#000","#fff","#000","#fff","#000","#000"];
       break;
-    case 4:
-      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-four.png";
+      case 4:
+          return dice = ["#fff","#000","#fff","#000","#000","#000","#fff","#000","#fff"];
       break;
-    case 5:
-      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-five.png";
+      case 5:
+          return dice = ["#fff","#000","#fff","#000","#fff","#000","#fff","#000","#fff"];
       break;
-    case 6:
-      diceTwoId.src = "/assets/images/favicon_io/dice-six-faces-six.png";
+      case 6:
+          return dice = ["#fff","#000","#fff","#fff","#000","#fff","#fff","#000","#fff"];
       break;
-    default:
-      diceTwoId.src = "/assets/images/favicon_io/hungry_alien.png"
+          
   }
 
+}
+
+function diceCssOne() {
+  let theDice = diceNumber();
+  let classDigit = document.querySelectorAll(".digit-one");
+
+  theDice.forEach((color, classy) => {
+      classDigit[classy].style.backgroundColor=color;
+  });
   return theDice;
+}
+
+function diceCssTwo() {
+  let theDice = diceNumber();
+  let classDigit = document.querySelectorAll(".digit-two");
+
+  theDice.forEach((color, classy) => {
+      classDigit[classy].style.backgroundColor=color;
+  });
+  return theDice;
+}
+
+function diceScoreOne () {
+  let cssOne = diceCssOne();
+  const diceNumberOne = cssOne.filter(cssOne => cssOne === "#fff");
+  return diceNumberOne.length;
+}
+
+function diceScoreTwo () {
+  let cssTwo = diceCssTwo();
+  const diceNumberTwo = cssTwo.filter(cssTwo => cssTwo === "#fff");
+  return diceNumberTwo.length;
 }
 
 /**
@@ -297,3 +281,70 @@ function totalScore() {
 
 }
 
+/*
+
+function randomDice () {
+    let diceNumber = Math.floor(Math.random() * 6 + 1);
+    return diceNumber;
+}
+
+function diceNumber () {
+    let diceNum = randomDice();
+    switch (diceNum) {
+        case 1:
+            return dice = ["#000","#000","#000","#000","#fff","#000","#000","#000","#000"];
+        break;
+        case 2:
+            return dice = ["#000","#000","#fff","#000","#000","#000","#fff","#000","#000"];
+        break;
+        case 3:
+            return dice = ["#000","#000","#fff","#000","#fff","#000","#fff","#000","#000"];
+        break;
+        case 4:
+            return dice = ["#fff","#000","#fff","#000","#000","#000","#fff","#000","#fff"];
+        break;
+        case 5:
+            return dice = ["#fff","#000","#fff","#000","#fff","#000","#fff","#000","#fff"];
+        break;
+        case 6:
+            return dice = ["#fff","#000","#fff","#fff","#000","#fff","#fff","#000","#fff"];
+        break;
+            
+    }
+
+}
+
+function diceCssOne() {
+    let theDice = diceNumber();
+    let classDigit = document.querySelectorAll(".digit-one");
+
+    theDice.forEach((color, classy) => {
+        classDigit[classy].style.backgroundColor=color;
+    });
+    return theDice;
+}
+
+function diceCssTwo() {
+    let theDice = diceNumber();
+    let classDigit = document.querySelectorAll(".digit-two");
+
+    theDice.forEach((color, classy) => {
+        classDigit[classy].style.backgroundColor=color;
+    });
+    return theDice;
+}
+
+function diceScoreOne () {
+    let cssOne = diceCssOne();
+    const diceNumberOne = cssOne.filter(cssOne => cssOne === "#fff");
+    return diceNumberOne.length;
+}
+
+function diceScoreTwo () {
+    let cssTwo = diceCssTwo();
+    const diceNumberTwo = cssTwo.filter(cssTwo => cssTwo === "#fff");
+    return diceNumberTwo.length;
+}
+
+
+*/

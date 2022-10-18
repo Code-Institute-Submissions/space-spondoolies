@@ -256,6 +256,39 @@ footer {
   }
 }
 
+/******CSS Dice Start******/
+#dice-one {
+  position: absolute;
+  display: inline-block;
+  top: 100px;
+  left: 100px;
+  width: 300px;
+  height: 300px;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+
+#dice-two {
+  position: absolute;
+  display: inline-block;
+  top: 100px;
+  left: 500px;
+  width: 300px;
+  height: 300px;
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+
+.digit-one, .digit-two {
+  float: left;
+  height: 98px;
+  width: 98px;
+  border:4px solid black;
+  border-radius: 2.5px;
+}
+/******CSS Dice End******/
 
 /**************************************/
 /* Media Queries for smaller screens */
