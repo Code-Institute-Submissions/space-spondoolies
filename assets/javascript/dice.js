@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
  * Gather functions to use with eventListener.
 */
 function eventSubmit() {
-  // diceOne();
-  // diceTwo();
-  // totalScore();
-  // statusReport();
-  // hideElements();
-  // spaceQuizScore();
-  // spaceQuizReport();
+  diceScoreOne();
+  diceScoreTwo();
+  totalScore();
+  statusReport();
+  hideElements();
+  spaceQuizScore();
+  spaceQuizReport();
   diceCssOne();
   diceCssTwo();
 }
@@ -176,8 +176,8 @@ function statusReport() {
  * The return values are stored in a array to allow scores to increment or decrement.
  **/
 function scoreBoard() {
-  let dieOne = diceOne();
-  let dieTwo = diceTwo();
+  let dieOne = diceScoreOne();
+  let dieTwo = diceScoreTwo();
   let allDice = dieOne + dieTwo;
   let bonusPoints = document.getElementById("bonus-points");
 
@@ -227,7 +227,7 @@ function scoreBoard() {
 
   let quizScore = spaceQuizScore();
   let quizReport = document.getElementById("space-quiz-report");
-  let resultsBox = document.getElementById("results-quiz");
+  // let resultsBox = document.getElementById("results-quiz");
 
     if (quizScore === 0) {
 
@@ -280,71 +280,3 @@ function totalScore() {
   document.getElementById("total-score").innerText = oldScore + parseInt(scoreBoard()) + parseInt(alienQuizScore);
 
 }
-
-/*
-
-function randomDice () {
-    let diceNumber = Math.floor(Math.random() * 6 + 1);
-    return diceNumber;
-}
-
-function diceNumber () {
-    let diceNum = randomDice();
-    switch (diceNum) {
-        case 1:
-            return dice = ["#000","#000","#000","#000","#fff","#000","#000","#000","#000"];
-        break;
-        case 2:
-            return dice = ["#000","#000","#fff","#000","#000","#000","#fff","#000","#000"];
-        break;
-        case 3:
-            return dice = ["#000","#000","#fff","#000","#fff","#000","#fff","#000","#000"];
-        break;
-        case 4:
-            return dice = ["#fff","#000","#fff","#000","#000","#000","#fff","#000","#fff"];
-        break;
-        case 5:
-            return dice = ["#fff","#000","#fff","#000","#fff","#000","#fff","#000","#fff"];
-        break;
-        case 6:
-            return dice = ["#fff","#000","#fff","#fff","#000","#fff","#fff","#000","#fff"];
-        break;
-            
-    }
-
-}
-
-function diceCssOne() {
-    let theDice = diceNumber();
-    let classDigit = document.querySelectorAll(".digit-one");
-
-    theDice.forEach((color, classy) => {
-        classDigit[classy].style.backgroundColor=color;
-    });
-    return theDice;
-}
-
-function diceCssTwo() {
-    let theDice = diceNumber();
-    let classDigit = document.querySelectorAll(".digit-two");
-
-    theDice.forEach((color, classy) => {
-        classDigit[classy].style.backgroundColor=color;
-    });
-    return theDice;
-}
-
-function diceScoreOne () {
-    let cssOne = diceCssOne();
-    const diceNumberOne = cssOne.filter(cssOne => cssOne === "#fff");
-    return diceNumberOne.length;
-}
-
-function diceScoreTwo () {
-    let cssTwo = diceCssTwo();
-    const diceNumberTwo = cssTwo.filter(cssTwo => cssTwo === "#fff");
-    return diceNumberTwo.length;
-}
-
-
-*/

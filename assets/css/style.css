@@ -144,6 +144,15 @@ input[type="text"] {
   font-size: 4rem;
 }
 
+/* Alien Images */
+#image-alien-512,
+#image-alien-hungry {
+  height: 20%;
+  width: 20%;
+  padding-top: 2.5%;
+  margin-left: 40%;
+}
+
 /* Styling Buttons */
 .my-button {
   position: relative;
