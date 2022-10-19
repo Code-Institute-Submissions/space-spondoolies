@@ -40,13 +40,21 @@ function eventSubmit() {
   diceCssTwo();
 }
 
+/**
+ * Function to supply dice with randoms number from one to six.
+ **/
 function randomDice () {
   let diceNumber = Math.floor(Math.random() * 6 + 1);
   return diceNumber;
 }
 
+/**
+ * Function to supply diceCssOne(), diceCssTwo()
+ * "dice div's" with colors to imitate a dice face.
+ **/
 function diceNumber () {
   let diceNum = randomDice();
+
   switch (diceNum) {
       case 1:
           return dice = ["#000","#000","#000","#000","#fff","#000","#000","#000","#000"];
@@ -71,6 +79,10 @@ function diceNumber () {
 
 }
 
+/**
+ * Receive diceNumber() array 1 - 9, generate class array 1 - 9, link
+ * color to div's to imitate dice face, for dice one.
+ **/
 function diceCssOne() {
   let theDice = diceNumber();
   let classDigit = document.querySelectorAll(".digit-one");
@@ -81,6 +93,10 @@ function diceCssOne() {
   return theDice;
 }
 
+/**
+ * Receive diceNumber() array 1 - 9, generate class array 1 - 9, link
+ * color to div's to imitate dice face, for dice two.
+ **/
 function diceCssTwo() {
   let theDice = diceNumber();
   let classDigit = document.querySelectorAll(".digit-two");
@@ -91,12 +107,20 @@ function diceCssTwo() {
   return theDice;
 }
 
+/**
+ * Filter the color white from the diceNumber() array, create a new array
+ * measure the length of the new array to calculate dice face number for dice one.
+ **/
 function diceScoreOne () {
   let cssOne = diceCssOne();
   const diceNumberOne = cssOne.filter(cssOne => cssOne === "#fff");
   return diceNumberOne.length;
 }
 
+/**
+ * Filter the color white from the diceNumber() array, create a new array
+ * measure the length of the new array to calculate dice face number for dice two.
+ **/
 function diceScoreTwo () {
   let cssTwo = diceCssTwo();
   const diceNumberTwo = cssTwo.filter(cssTwo => cssTwo === "#fff");
