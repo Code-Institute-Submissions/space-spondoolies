@@ -98,6 +98,7 @@ article {
 .box-half {
   display: inline-block;
   width: 49%;
+  background-color: #000;
   height: 330px;
   margin: 10px 0 5px 0;
   overflow: auto;
