@@ -22,11 +22,11 @@ Ideas that could be added,
 - Random questions on every reset    
 
 ## Header Section       
-![Header Section](/assets/images/readme/Heading.png)    
+![Header Section](/assets/images/readme/HeadingOne.png)    
 A basic header for a single page website. Try to imitate a old style 80's game.   
     
 ## Dashboard     
-![Dashboard](/assets/images/readme/DashBoard.png)    
+![Dashboard](/assets/images/readme/DashBoardOne.png)    
 Dashboard with four sections.   
 Top Left window showing the output from the function diceOne().     
 Top right window showing the output from the function diceTwo().     
@@ -38,13 +38,13 @@ Bottom right window is showing the output from the function statusBoard().
 Before the game starts the user has the option of entering a game name, if not "Human" is the default name. To start and play the game, "Spin The Dice" is pressed. after the first press "Enter User Name" disappears along with the input and Space Quiz. Keep pressing until plus 10,000 or higher for a win. Minus 10,000 or lower to lose.     
 
 ## Dice One & Dice Two     
-![DiceOne & Dice Two](/assets/images/readme/DiceOneTwo.png)    
+![DiceOne & Dice Two](/assets/images/readme/DiceOneTwoOne.png)    
 Imitating double dice throw with Math.random from and including 1 to 6. Showing each dice in 
 a separate window highlights how random the throws are. The output of both dice numbers are added to generate a score. The return of DiceOne and DiceTwo are taken in by the scoreBoard() function. Even numbers are + 2000 (spondoolies), and odd numbers - 2000.
 Bonus points of 500 if a double is thrown, double + 2500.    
 
 ## Bonus Points    
-![Bonus Points](/assets/images/readme/BonusPoints.png)    
+![Bonus Points](/assets/images/readme/BonusPointsOne.png)    
 During the game if a double is thrown a bonus of 500 is won. This is highlighted with CSS animation and flashes in the Status Report window.   
 Information from the Space Quiz is show in the "Status Report" along with extra points for correct answers.    
 
@@ -61,7 +61,7 @@ When a score of plus 10,000 or higher is achieved the game is won. The "Spin The
 The same as the Game Won status report but with hungry Alien!     
 
 ## Game Rules     
-![Game Rules](/assets/images/readme/GameRules.png)     
+![Game Rules](/assets/images/readme/GameRulesOne.png)     
 Bottom of the page showing the simple rules of the game. Icons are used for the list icon.    
 
 ## Git Pages Testing   
