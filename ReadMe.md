@@ -76,12 +76,16 @@ Feeling that the dice game was just not enough. I started to work on the space q
 Tested html on the 11/10/2022 14:00. Failed.         
 I used prettier to tidy up html, W3C validator did not like the layout.
 Tested html on the 11/10/2022 14:30. Passed.   
-Do not use Prettier for html formatting.
+Do not use Prettier for html formatting.     
+Tested HTML on the 24/10/2022 14:30. Passed.     
+![W3C HTML Validator](/assets/images/readme/Html_Pass_20221024.png)     
 
 ## W3C CSS Testing    
 [W3C CSS JigSaw Validator](https://jigsaw.w3.org/css-validator/)     
 Tested css on the 11/10/2022 14:30. Passed.    
 Prettier works ok with CSS.    
+Tested CSS on the 24/10/2022 14:30. Passed.     
+![W3C CSS Validator](/assets/images/readme/CSS_Pass_20221024.png)     
 
 ## JavaScript Testing - JSHint    
 [JavaScript Hint](https://jshint.com/)   
