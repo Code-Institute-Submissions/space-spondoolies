@@ -84,7 +84,7 @@ function spaceQuiz(questions, quizBox, resultsBox, submitButton) {
         );
       }
 
-      output.push( // filling the output array
+      output.push( // filling the output array. Adding html elements.
         '<p class="question-quiz"><b>' +
           questions[i].question +
           "</b></p>" +

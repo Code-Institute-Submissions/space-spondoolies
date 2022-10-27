@@ -48,9 +48,17 @@ Bonus points of 500 if a double is thrown, double + 2500.
 During the game if a double is thrown a bonus of 500 is won. This is highlighted with CSS animation and flashes in the Status Report window.   
 Information from the Space Quiz is show in the "Status Report" along with extra points for correct answers.    
 
+## Space Quiz   
+![Space Quiz](/assets/images/readme/QuizOne.png)    
+5 general knowledge space questions. Select your answers and press the results button to get your score.
+Your score is added to Space Spondoolies for extra points with the spaceQuizFunction().     
+Any question that was answer incorrectly disappears.    
+        
+![Space Quiz](/assets/images/readme/QuizResultOne.png)       
+
 ## Quiz Bonus Points    
-[Space Quiz](/assets/images/readme/SpaceQuiz.png)    
-Get extra bonus points for answering the correct questions.   
+![Space Quiz](/assets/images/readme/SpaceQuizResultsOne.png)    
+Get extra bonus points for answering the correct questions. 50 points for each correct correction using the spaceQuizReportFunction()     
 
 ## Game Won - Status Report
 ![Game Won](/assets/images/readme/GameWon.png)    
@@ -58,7 +66,7 @@ When a score of plus 10,000 or higher is achieved the game is won. The "Spin The
 
 ## Game Lost - Status Report   
 ![Game Lost](/assets/images/readme/GameLost.png)     
-The same as the Game Won status report but with hungry Alien!     
+The same as the Game Won status report but with a Hungry Alien!     
 
 ## Game Rules     
 ![Game Rules](/assets/images/readme/GameRulesOne.png)     
